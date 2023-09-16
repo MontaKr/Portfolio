@@ -5,18 +5,69 @@ export const Box = styled.div`
   inset: 50px 50px 50px 150px;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-radius: 30px;
+
+  .skillContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    padding: 0px 40px;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      li {
+        background: #fff;
+        border-radius: 50px;
+        width: 17vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(-20px);
+        box-shadow: 10px 10px 2px rgba(255, 255, 255, 0.2);
+
+        .icon {
+          position: relative;
+          top: 3px;
+          font-size: 25px;
+        }
+
+        span {
+          font-size: 25px;
+          font-weight: 500;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 `;
 
 export const Wrap = styled.div`
   position: relative;
+  top: 15px;
   display: grid;
   place-items: center;
-  width: 360px;
-  height: 360px;
-  border: 1px solid #fff;
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+  transform: translateY(-50px);
+
+  &::before {
+    content: "MontaKr";
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    color: #fff;
+  }
 
   .neon,
   .border {
@@ -57,8 +108,8 @@ export const Wrap = styled.div`
 
   .imgContainer {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height: 380px;
     z-index: 3;
 
     img {

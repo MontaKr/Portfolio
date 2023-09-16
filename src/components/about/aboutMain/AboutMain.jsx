@@ -1,8 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { Box, Wrap } from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenFancy, faGlobe, faCode } from "@fortawesome/free-solid-svg-icons";
+import { gsap } from "gsap";
 
 const AboutMain = () => {
   const imgRef = useRef(null);
+
+  //rainbow border effect
   useEffect(() => {
     const root = document.documentElement;
 
@@ -34,6 +39,25 @@ const AboutMain = () => {
     };
   }, []);
 
+  //page landing effect
+  useEffect(() => {
+    gsap.to(".skillContainer ul li", {
+      duration: 1,
+      opacity: 1.5,
+      x: 0,
+      ease: "power3.inOut",
+      delay: 0.8,
+      stagger: 0.25,
+    });
+
+    gsap.to(imgRef.current, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power3.inOut",
+    });
+  }, []);
+
   return (
     <Box>
       <Wrap ref={imgRef}>
@@ -50,6 +74,22 @@ const AboutMain = () => {
           />
         </div>
       </Wrap>
+      <div className="skillContainer">
+        <ul>
+          <li>
+            <FontAwesomeIcon className="icon" icon={faCode} />
+            <span>Front-End</span>
+          </li>
+          <li>
+            <FontAwesomeIcon className="icon" icon={faPenFancy} />
+            <span>Web Publishing</span>
+          </li>
+          <li>
+            <FontAwesomeIcon className="icon" icon={faGlobe} />
+            <span>3 Languages</span>
+          </li>
+        </ul>
+      </div>
     </Box>
   );
 };
