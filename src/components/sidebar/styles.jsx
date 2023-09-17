@@ -25,7 +25,8 @@ export const Wrap = styled.div`
   .navigation {
     position: fixed;
     inset: 120px 0 120px 20px;
-    background: rgba(0, 0, 0, 0.1);
+    background: ${(props) =>
+      props.isContactPage ? "rgba(255,255,255,0.3)" : "rgba(0, 0, 0, 0.1)"};
     backdrop-filter: blur(20px);
     border-radius: 20px;
     width: 75px;

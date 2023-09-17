@@ -34,12 +34,13 @@ const Sidebar = () => {
     {
       name: "Photos",
       iconType: CameraOutline,
-      color: "rgb(169, 222, 249)",
+      color: "rgb(228, 193, 249)",
     },
     {
       name: "Settings",
+      path: "/contact",
       iconType: ConstructOutline,
-      color: "rgb(228, 193, 249)",
+      color: "rgb(169, 222, 249)",
     },
   ];
 
@@ -68,6 +69,7 @@ const Sidebar = () => {
     <>
       <GlobalStyle />
       <Wrap
+        isContactPage={location.pathname === "/contact"}
         activeColor={links.find((link) => link.name === activeLink).color}
         onMouseEnter={enterSidebar}
         onMouseLeave={leaveSidebar}
