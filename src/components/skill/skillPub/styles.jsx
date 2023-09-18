@@ -6,9 +6,15 @@ export const Wrap = styled.div`
   margin-right: 50px;
   margin-top: 50px;
 
-  background: rgba(0, 0, 0, 0.8);
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  .box {
+    position: relative;
+    width: 48.5%;
+    height: 100%;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.8);
+  }
 `;
