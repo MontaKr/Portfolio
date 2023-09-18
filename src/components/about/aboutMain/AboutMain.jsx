@@ -46,7 +46,7 @@ const AboutMain = () => {
       opacity: 1.5,
       x: 0,
       ease: "power3.inOut",
-      delay: 0.8,
+      delay: 0.65,
       stagger: 0.25,
     });
 

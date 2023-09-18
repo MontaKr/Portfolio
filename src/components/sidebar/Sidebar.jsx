@@ -3,9 +3,9 @@ import { useRef, useState, useEffect } from "react";
 import { GlobalStyle, Wrap } from "./styles";
 import { HomeOutline } from "react-ionicons";
 import { PersonOutline } from "react-ionicons";
-import { ChatboxOutline } from "react-ionicons";
 import { CameraOutline } from "react-ionicons";
-import { ConstructOutline } from "react-ionicons";
+import { MailOutline } from "react-ionicons";
+import { ClipboardOutline } from "react-ionicons";
 import { useStore } from "../../store/index";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -27,8 +27,9 @@ const Sidebar = () => {
       color: "rgba(252, 246, 189,0.7)",
     },
     {
-      name: "Messages",
-      iconType: ChatboxOutline,
+      name: "Skills",
+      path: "/skills",
+      iconType: ClipboardOutline,
       color: "rgba(208, 244, 222,0.8)",
     },
     {
@@ -39,8 +40,8 @@ const Sidebar = () => {
     {
       name: "Settings",
       path: "/contact",
-      iconType: ConstructOutline,
-      color: "rgb(169, 222, 249)",
+      iconType: MailOutline,
+      color: "rgb(0, 188, 212)",
     },
   ];
 
