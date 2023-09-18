@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Wrap } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_alpzjjk",
+        "template_n9woofr",
+        formRef.current,
+        "tALHXmW1o6Hs3_H3S"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <Wrap>
       <div className="content">
@@ -31,18 +55,18 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="contactForm">
-          <form>
+          <form ref={formRef} onSubmit={sendEmail}>
             <h2>Send Message</h2>
             <div className="inputBox">
               <input type="text" name="" required="required" />
               <span>Full Name</span>
             </div>
             <div className="inputBox">
-              <input type="text" name="" required="required" />
+              <input type="email" name="" required="required" />
               <span>Email</span>
             </div>
             <div className="inputBox">
-              <textarea required="required"></textarea>
+              <textarea name="message" required="required"></textarea>
               <span>Type your Message...</span>
             </div>
             <div className="inputBox">

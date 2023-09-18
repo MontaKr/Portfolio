@@ -8,7 +8,7 @@ export const Wrap = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(169, 222, 249, 0.7);
+  background: rgba(192, 192, 192, 0.2);
   border-radius: 30px;
 
   .content {
