@@ -1,20 +1,40 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  height: calc(100vh - 100px);
-  margin-left: 150px;
-  margin-right: 50px;
-  margin-top: 50px;
-
+  border: 1px solid red;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  .box {
-    position: relative;
-    width: 48.5%;
-    height: 100%;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.8);
+  .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    ul {
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+`;
+
+export const List = styled.li`
+  -webkit-box-reflect: below -20px linear-gradient(transparent, transparent, #0004);
+
+  img {
+    width: 20vw;
+    transition: 1s;
+
+    &:hover {
+      transform: rotateZ(50deg);
+    }
   }
 `;

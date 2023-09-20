@@ -1,42 +1,18 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  /* position: absolute;
-  border: 1px solid white;
-  min-height: 100vh;
-  inset: 50px 50px 50px 150px;
-  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid green;
+  position: relative;
+  height: 100vh;
+  width: calc(100vw - 90px);
+  margin-left: 90px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border-radius: 30px; */
-
-  height: 90vh;
-  min-height: 90vh;
-  margin-left: 150px;
-  margin-right: 50px;
-  margin-top: 50px;
-
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 30px;
-
-  .text {
-    color: #fff;
-    font-size: 6vw;
-    font-weight: 900;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  }
 
   .container {
-    flex-grow: 1.3;
-
     .box {
       position: relative;
       width: 200px;

@@ -25,7 +25,6 @@ const SkillList = () => {
 
   return (
     <Wrap degree={degree}>
-      <span className="text">Front-End</span>
       <div className="container">
         <div className="box">
           {imgArray.map((val, idx) => {

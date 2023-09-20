@@ -1,11 +1,31 @@
 import React from "react";
-import { Wrap } from "./styles";
+import { Wrap, List } from "./styles";
+import figma from "../../../assets/icons/figma.png";
+import photoshop from "../../../assets/icons/photoshop.png";
+import illustrator from "../../../assets/icons/illustrator.png";
+import xd from "../../../assets/icons/xd.png";
 
 const SkillPub = () => {
+  const skillArray = [
+    { name: figma, src: figma },
+    { name: photoshop, src: photoshop },
+    { name: illustrator, src: illustrator },
+    { name: xd, src: xd },
+  ];
+
   return (
     <Wrap>
-      <div className="box box1"></div>
-      <div className="box box2"></div>
+      <div className="container">
+        <ul>
+          {skillArray.map((val, idx) => {
+            return (
+              <List className="anim">
+                <img src={val.src} />
+              </List>
+            );
+          })}
+        </ul>
+      </div>
     </Wrap>
   );
 };
