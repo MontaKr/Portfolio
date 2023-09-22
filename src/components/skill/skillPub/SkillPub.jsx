@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Wrap, List } from "./styles";
 import figma from "../../../assets/icons/figma.png";
 import photoshop from "../../../assets/icons/photoshop.png";
 import illustrator from "../../../assets/icons/illustrator.png";
 import xd from "../../../assets/icons/xd.png";
 
-const SkillPub = () => {
+const SkillPub = forwardRef((props, ref) => {
   const skillArray = [
     { name: figma, src: figma },
     { name: photoshop, src: photoshop },
@@ -14,7 +14,7 @@ const SkillPub = () => {
   ];
 
   return (
-    <Wrap>
+    <Wrap ref={ref}>
       <div className="container">
         <ul>
           {skillArray.map((val, idx) => {
@@ -28,6 +28,6 @@ const SkillPub = () => {
       </div>
     </Wrap>
   );
-};
+});
 
 export default SkillPub;

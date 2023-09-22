@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Wrap } from "./styles";
 import KoreaFlag from "../../../assets/language/KoreanFlag.png";
 import EnglishFlag from "../../../assets/language/EnglishFlag.png";
@@ -18,9 +18,9 @@ const lanArray = [
   { name: "Japan", color: "#fff", flagImg: JapanFlag, langImg: JapanWord },
 ];
 
-const SkillLanguage = () => {
+const SkillLanguage = forwardRef((props, ref) => {
   return (
-    <Wrap>
+    <Wrap ref={ref}>
       <div className="container">
         {lanArray.map((val, idx) => {
           return (
@@ -43,6 +43,6 @@ const SkillLanguage = () => {
       </div>
     </Wrap>
   );
-};
+});
 
 export default SkillLanguage;

@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  border: 1px solid green;
+  /* border: 2px solid green; */
   position: relative;
   height: 100vh;
-  width: calc(100vw - 90px);
-  margin-left: 90px;
-
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   .container {
+    display: flex;
+    justify-content: center;
+
     .box {
       position: relative;
       width: 200px;

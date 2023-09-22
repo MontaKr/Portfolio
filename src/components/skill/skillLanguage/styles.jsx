@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  border: 1px solid blue;
   position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   .container {
     width: 80%;

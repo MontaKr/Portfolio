@@ -33,11 +33,6 @@ const Sidebar = () => {
       color: "rgba(208, 244, 222,0.8)",
     },
     {
-      name: "Photos",
-      iconType: CameraOutline,
-      color: "rgb(228, 193, 249)",
-    },
-    {
       name: "Settings",
       path: "/contact",
       iconType: MailOutline,
