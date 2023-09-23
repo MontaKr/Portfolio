@@ -24,7 +24,7 @@ const SkillsWrap = () => {
 
     let ctx = gsap.context(() => {
       let scrollTween = gsap.to(sections, {
-        xPercent: -105 * (sections.length - 1),
+        xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: ".container",
@@ -36,7 +36,7 @@ const SkillsWrap = () => {
     });
 
     gsap.to(mask, {
-      width: "105%",
+      width: "105.5%",
       scrollTrigger: {
         trigger: ".wrapper",
         start: "top left",

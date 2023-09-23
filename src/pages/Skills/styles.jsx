@@ -21,11 +21,9 @@ export const Wrap = styled.div`
       svg {
         z-index: 100;
         position: absolute;
-        top: 12em;
+        bottom: 2em;
         left: 10vw;
-        width: 25vw;
-        transform-origin: top left;
-        transform: rotate(90deg);
+        width: 80vw;
 
         .mask {
           width: 0;

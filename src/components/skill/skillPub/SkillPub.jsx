@@ -15,6 +15,7 @@ const SkillPub = forwardRef((props, ref) => {
 
   return (
     <Wrap ref={ref}>
+      <span className="title">Web-Publishing</span>
       <div className="container">
         <ul>
           {skillArray.map((val, idx) => {

@@ -6,10 +6,38 @@ export const Wrap = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  .title {
+    /* border: 1px solid red; */
+    color: #fff;
+    font-size: 7em;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      height: 4px;
+      background-color: white;
+      bottom: 100px;
+      /* width: 120%;
+      left: 50%;
+      transform: translateX(-50%); */
+      width: 100%;
+      left: 0;
+    }
+  }
+
   .container {
+    flex-grow: 1.3;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
 

@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { Wrap } from "./styles";
+import { Wrap, Card } from "./styles";
 import KoreaFlag from "../../../assets/language/KoreanFlag.png";
 import EnglishFlag from "../../../assets/language/EnglishFlag.png";
 import JapanFlag from "../../../assets/language/JapanFlag.png";
@@ -8,36 +8,55 @@ import JapanWord from "../../../assets/language/JapanWord.png";
 import EnglishWord from "../../../assets/language/EnglishWord.png";
 
 const lanArray = [
-  { name: "Korea", color: "#fff", flagImg: KoreaFlag, langImg: KoreanWord },
+  {
+    name: "Korea",
+    color: "#EEE3CB",
+    text: "• Native Language",
+    flagImg: KoreaFlag,
+    langImg: KoreanWord,
+  },
   {
     name: "English",
-    color: "#fff",
+    text: (
+      <>
+        • Business Level <br />• TOEIC 805
+      </>
+    ),
+    color: "#D7C0AE",
     flagImg: EnglishFlag,
     langImg: EnglishWord,
   },
-  { name: "Japan", color: "#fff", flagImg: JapanFlag, langImg: JapanWord },
+  {
+    name: "Japan",
+    text: (
+      <>
+        • Business Level <br />
+        • JLPT N2 <br />• 1 Year Studying Abroad (Kyoto)
+      </>
+    ),
+    color: "#967E76",
+    flagImg: JapanFlag,
+    langImg: JapanWord,
+  },
 ];
 
 const SkillLanguage = forwardRef((props, ref) => {
   return (
     <Wrap ref={ref}>
+      <span className="title">Language</span>
       <div className="container">
         {lanArray.map((val, idx) => {
           return (
-            <div className="card">
+            <Card clr={val.color}>
               <div className="circle">
                 <img src={val.flagImg} className="logo" />
               </div>
               <div className="content">
                 <h2>{val.name}</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi distinctio id eveniet obcaecati perspiciatis.
-                </p>
-                <a href="#">Explore More</a>
+                <p>{val.text}</p>
               </div>
               <img src={val.langImg} className="product_img" />
-            </div>
+            </Card>
           );
         })}
       </div>
