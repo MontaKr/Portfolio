@@ -33,18 +33,34 @@ const SkillsWrap = () => {
           end: "+=3000",
         },
       });
-    });
 
-    gsap.to(mask, {
-      width: "105.5%",
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top left",
-        scrub: 1,
-      },
-    });
+      gsap.to(mask, {
+        width: "105.5%",
+        scrollTrigger: {
+          trigger: ".wrapper",
+          start: "top left",
+          scrub: 1,
+        },
+      });
 
-    console.log(sections);
+      sections.forEach((section) => {
+        let text = section.querySelectorAll(".anim");
+
+        gsap.from(text, {
+          y: -130,
+          opacity: 0,
+          duration: 2,
+          ease: "elastic",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: section,
+            containerAnimation: scrollTween,
+            start: "left center",
+            // markers: true,
+          },
+        });
+      });
+    });
 
     return () => ctx.revert();
   }, []);

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  min-height: 100vh;
+  border: 1px solid red;
+  min-height: 300vh;
   background: #2f323f;
   display: flex;
   justify-content: center;
