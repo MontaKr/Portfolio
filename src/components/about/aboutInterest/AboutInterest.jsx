@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Wrap, Img } from "./styles";
 import music from "../../../assets/interests/music.png";
 import movie from "../../../assets/interests/movie.png";
@@ -11,7 +11,7 @@ import photo from "../../../assets/interests/photo.png";
 import violin from "../../../assets/interests/violin.png";
 import soccer from "../../../assets/interests/soccer.png";
 
-const AboutInterest = () => {
+const AboutInterest = React.forwardRef((props, ref) => {
   const parallax = (e) => {
     e.currentTarget.querySelectorAll(".layer").forEach((layer) => {
       const speed = layer.getAttribute("data-speed");
@@ -36,7 +36,7 @@ const AboutInterest = () => {
   ];
 
   return (
-    <Wrap>
+    <Wrap ref={ref}>
       <div className="container">
         <section onMouseMove={parallax}>
           {imgArray.map((val, key) => {
@@ -56,6 +56,6 @@ const AboutInterest = () => {
       </div>
     </Wrap>
   );
-};
+});
 
 export default AboutInterest;

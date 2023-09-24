@@ -1,50 +1,57 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-  position: absolute;
-  inset: 50px 50px 50px 150px;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 30px;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #2f323f;
 
-  .skillContainer {
-    width: 100%;
+  .container {
+    position: absolute;
+    inset: 50px 50px 50px 150px;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 15vh;
-    padding: 0px 40px;
+    border-radius: 30px;
 
-    ul {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+    .skillContainer {
       width: 100%;
+      display: flex;
+      align-items: center;
+      height: 15vh;
+      padding: 0px 40px;
 
-      li {
-        background: #fff;
-        border-radius: 50px;
-        width: 17vw;
-        height: 10vh;
+      ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        opacity: 0;
-        transform: translateX(-20px);
-        box-shadow: 10px 10px 2px rgba(255, 255, 255, 0.2);
+        width: 100%;
 
-        .icon {
-          position: relative;
-          top: 3px;
-          font-size: 25px;
-        }
+        li {
+          background: #fff;
+          border-radius: 50px;
+          width: 17vw;
+          height: 10vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transform: translateX(-20px);
+          box-shadow: 10px 10px 2px rgba(255, 255, 255, 0.2);
 
-        span {
-          font-size: 25px;
-          font-weight: 500;
-          margin-left: 20px;
+          .icon {
+            position: relative;
+            top: 3px;
+            font-size: 25px;
+          }
+
+          span {
+            font-size: 25px;
+            font-weight: 500;
+            margin-left: 20px;
+          }
         }
       }
     }

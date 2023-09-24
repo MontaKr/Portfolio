@@ -95,7 +95,12 @@ const SkillsWrap = () => {
                 />
               </mask>
               <g mask="url(#mask0_0_1)">
-                <rect className="mask" y="-49" height="99" fill="black" />
+                <rect
+                  className="mask"
+                  y="-49"
+                  height="99"
+                  fill="rgb(255, 153, 200)"
+                />
               </g>
             </svg>
             <SkillList ref={skillListRef} />

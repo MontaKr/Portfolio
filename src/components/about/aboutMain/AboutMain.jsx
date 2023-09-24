@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, forwardRef } from "react";
 import { Box, Wrap } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenFancy, faGlobe, faCode } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 
-const AboutMain = () => {
-  const imgRef = useRef(null);
+const AboutMain = React.forwardRef((props, ref) => {
+  const imgRef = props.imgRef;
 
   //rainbow border effect
   useEffect(() => {
@@ -39,59 +39,42 @@ const AboutMain = () => {
     };
   }, []);
 
-  //page landing effect
-  useEffect(() => {
-    gsap.to(".skillContainer ul li", {
-      duration: 1,
-      opacity: 1.5,
-      x: 0,
-      ease: "power3.inOut",
-      delay: 0.65,
-      stagger: 0.25,
-    });
-
-    gsap.to(imgRef.current, {
-      duration: 1,
-      opacity: 1,
-      y: 0,
-      ease: "power3.inOut",
-    });
-  }, []);
-
   return (
-    <Box>
-      <Wrap ref={imgRef}>
-        <div className="neon">
-          <div className="gradient"></div>
+    <Box ref={ref}>
+      <div className="container">
+        <Wrap ref={imgRef}>
+          <div className="neon">
+            <div className="gradient"></div>
+          </div>
+          <div className="border">
+            <div className="gradient"></div>
+          </div>
+          <div className="imgContainer">
+            <img
+              src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/2800/Nick-Wilde.Zootopia.webp"
+              alt="profile"
+            />
+          </div>
+        </Wrap>
+        <div className="skillContainer">
+          <ul>
+            <li>
+              <FontAwesomeIcon className="icon" icon={faCode} />
+              <span>Front-End</span>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon" icon={faPenFancy} />
+              <span>Web Publishing</span>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon" icon={faGlobe} />
+              <span>3 Languages</span>
+            </li>
+          </ul>
         </div>
-        <div className="border">
-          <div className="gradient"></div>
-        </div>
-        <div className="imgContainer">
-          <img
-            src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/2800/Nick-Wilde.Zootopia.webp"
-            alt="profile"
-          />
-        </div>
-      </Wrap>
-      <div className="skillContainer">
-        <ul>
-          <li>
-            <FontAwesomeIcon className="icon" icon={faCode} />
-            <span>Front-End</span>
-          </li>
-          <li>
-            <FontAwesomeIcon className="icon" icon={faPenFancy} />
-            <span>Web Publishing</span>
-          </li>
-          <li>
-            <FontAwesomeIcon className="icon" icon={faGlobe} />
-            <span>3 Languages</span>
-          </li>
-        </ul>
       </div>
     </Box>
   );
-};
+});
 
 export default AboutMain;

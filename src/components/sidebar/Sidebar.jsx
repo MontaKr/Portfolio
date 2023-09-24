@@ -18,7 +18,7 @@ const Sidebar = () => {
       name: "Home",
       path: "/",
       iconType: HomeOutline,
-      color: "rgb(255, 153, 200)",
+      color: "rgba(208, 244, 222,0.8)",
     },
     {
       name: "About",
@@ -30,7 +30,7 @@ const Sidebar = () => {
       name: "Skills",
       path: "/skills",
       iconType: ClipboardOutline,
-      color: "rgba(208, 244, 222,0.8)",
+      color: "rgb(255, 153, 200)",
     },
     {
       name: "Settings",
