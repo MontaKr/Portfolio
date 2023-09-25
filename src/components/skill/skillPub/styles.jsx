@@ -51,8 +51,10 @@ export const Wrap = styled.div`
 
   @media (max-width: 1024px) {
     .title {
+      text-align: center;
+
       &::before {
-        bottom: 6vw;
+        display: none;
       }
     }
 
@@ -65,13 +67,6 @@ export const Wrap = styled.div`
     .title {
       text-align: center;
       font-size: 6em;
-
-      &::before {
-        bottom: 6vw;
-        width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
     }
 
     .container {

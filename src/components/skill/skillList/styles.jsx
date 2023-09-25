@@ -89,7 +89,7 @@ export const Wrap = styled.div`
   @media (max-width: 1024px) {
     .title {
       &::before {
-        bottom: 9vw;
+        display: none;
       }
     }
   }
@@ -97,10 +97,6 @@ export const Wrap = styled.div`
   @media (max-width: 540px) {
     .title {
       font-size: 6em;
-
-      &::before {
-        bottom: 15vw;
-      }
     }
 
     .container {

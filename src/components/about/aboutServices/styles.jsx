@@ -36,7 +36,6 @@ export const Wrap = styled.div`
       align-items: center;
 
       .serviceWrap {
-        /* border: 1px solid blue; */
         height: 90%;
         width: 90%;
         display: flex;
@@ -59,7 +58,6 @@ export const Wrap = styled.div`
           }
 
           .iconBx {
-            /* background: white; */
             position: relative;
             margin-top: 50px;
             width: 100%;
@@ -79,7 +77,6 @@ export const Wrap = styled.div`
           }
 
           .nameBx {
-            /* background: blue; */
             position: relative;
             width: 100%;
             height: 30%;
@@ -90,13 +87,12 @@ export const Wrap = styled.div`
             span {
               color: #fff;
               text-align: center;
-              font-size: 2.5em;
+              font-size: 2vw;
               font-weight: 600;
             }
           }
 
           .contentBx {
-            /* background: red; */
             position: relative;
             margin-bottom: 50px;
             width: 100%;
@@ -108,7 +104,7 @@ export const Wrap = styled.div`
             span {
               color: #fff;
               padding: 5px 30px;
-              font-size: 1.5em;
+              font-size: 1.5vw;
               font-weight: 400;
               text-align: center;
               line-height: 1.2em;

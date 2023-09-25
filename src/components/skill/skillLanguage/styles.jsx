@@ -44,7 +44,7 @@ export const Wrap = styled.div`
   @media (max-width: 1024px) {
     .title {
       &::before {
-        bottom: 6vw;
+        display: none;
       }
     }
   }
@@ -52,10 +52,6 @@ export const Wrap = styled.div`
   @media (max-width: 540px) {
     .title {
       font-size: 5em;
-
-      &::before {
-        display: none;
-      }
     }
 
     .container {
