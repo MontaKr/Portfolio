@@ -23,10 +23,9 @@ export const Wrap = styled.div`
     &::before {
       content: "";
       position: absolute;
-
       height: 4px;
       background-color: white;
-      bottom: 100px;
+      bottom: 5vw;
       /* width: 120%;
       left: 50%;
       transform: translateX(-50%); */

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  /* border: 1px solid orange; */
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -11,7 +10,6 @@ export const Wrap = styled.div`
   justify-content: center;
 
   .title {
-    /* border: 1px solid blue; */
     color: #fff;
     font-size: 7em;
     font-weight: 900;
@@ -27,7 +25,7 @@ export const Wrap = styled.div`
       position: absolute;
       height: 4px;
       background-color: white;
-      bottom: 40px;
+      bottom: 1.5vw;
       width: 100%;
       left: 0;
     }

@@ -25,13 +25,9 @@ export const Wrap = styled.div`
     &::before {
       content: "";
       position: absolute;
-
       height: 4px;
       background-color: white;
-      bottom: 50px;
-      /* width: 120%;
-      left: 50%;
-      transform: translateX(-50%); */
+      bottom: 1.5vw;
       width: 100%;
       left: 0;
     }
@@ -51,8 +47,8 @@ export const Wrap = styled.div`
 
 export const Card = styled.div`
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,8 +106,8 @@ export const Card = styled.div`
       position: absolute;
       top: 10;
       left: 12;
-      width: 350px;
-      height: 350px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       background: #201e1e;
       border: 8px solid ${(props) => props.clr};
@@ -123,7 +119,7 @@ export const Card = styled.div`
 
     .logo {
       position: relative;
-      width: 300px;
+      width: 220px;
       transition: 0.5s;
       transition-delay: 0.5s;
     }

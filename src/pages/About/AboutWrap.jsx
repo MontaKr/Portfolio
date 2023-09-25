@@ -11,7 +11,7 @@ const AboutWrap = () => {
   const containerRef = useRef(null);
   const aboutMainRef = useRef(null);
   const aboutInterestRef = useRef(null);
-  const aboutServices = useRef(null);
+  const aboutServicesRef = useRef(null);
   const imgRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -94,8 +94,8 @@ const AboutWrap = () => {
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       let ctx = gsap.context(() => {
-        gsap.set(aboutInterestRef.current, { x: 2000 });
-        gsap.set(aboutServices.current, { x: -2000 });
+        gsap.set(aboutServicesRef.current, { x: 2000 });
+        gsap.set(aboutInterestRef.current, { x: -2000 });
 
         let tl1 = gsap.timeline({
           scrollTrigger: {
@@ -108,14 +108,14 @@ const AboutWrap = () => {
           },
         });
 
-        tl1.to(aboutInterestRef.current, {
+        tl1.to(aboutServicesRef.current, {
           x: 0,
           duration: 3,
         });
 
         let tl2 = gsap.timeline({
           scrollTrigger: {
-            trigger: aboutInterestRef.current,
+            trigger: aboutServicesRef.current,
             start: "35% top",
             end: "bottom top",
             scrub: true,
@@ -124,7 +124,7 @@ const AboutWrap = () => {
           },
         });
 
-        tl2.to(aboutServices.current, {
+        tl2.to(aboutInterestRef.current, {
           x: 0,
           duration: 3,
         });
@@ -158,8 +158,8 @@ const AboutWrap = () => {
     <Wrap>
       <div ref={containerRef} className="containerWrap">
         <AboutMain imgRef={imgRef} ref={aboutMainRef} />
+        <AboutServices ref={aboutServicesRef} />
         <AboutInterest ref={aboutInterestRef} />
-        <AboutServices ref={aboutServices} />
       </div>
     </Wrap>
   );

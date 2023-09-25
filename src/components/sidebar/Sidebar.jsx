@@ -48,6 +48,7 @@ const Sidebar = () => {
   const { enterSidebar, leaveSidebar } = useStore();
 
   const [activeLink, setActiveLink] = useState(determineActiveLink);
+  const [clickedLink, setClickedLink] = useState(null);
 
   useEffect(() => {
     setActiveLink(determineActiveLink());
@@ -79,12 +80,23 @@ const Sidebar = () => {
                 <li
                   key={idx}
                   className={`list ${activeLink === val.name ? "active" : ""}`}
-                  onClick={() => setActiveLink(val.name)}
+                  onClick={() => {
+                    setActiveLink(val.name);
+                    setClickedLink(val.name);
+                  }}
                 >
                   <Link to={val.path}>
-                    <span className="icon">
+                    <span
+                      className="icon"
+                      data-name={val.name}
+                      data-clicked={clickedLink === val.name ? "true" : "false"}
+                    >
                       <IconComponent
-                        color={activeLink === val.name ? "#fff" : "#000"}
+                        color={
+                          activeLink === val.name
+                            ? "#000"
+                            : "rgba(255,255,255,0.7)"
+                        }
                       />
                     </span>
                   </Link>

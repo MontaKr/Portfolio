@@ -26,7 +26,7 @@ export const Wrap = styled.div`
     position: fixed;
     inset: 120px 0 120px 20px;
     background: ${(props) =>
-      props.isContactPage ? "rgba(255,255,255,0.3)" : "rgba(0, 0, 0, 0.1)"};
+      props.isContactPage ? "rgba(192, 192, 192, 0.2)" : "rgba(0, 0, 0, 0.2)"};
     backdrop-filter: blur(20px);
     border-radius: 20px;
     width: 75px;
@@ -127,6 +127,30 @@ export const Wrap = styled.div`
             line-height: 60px;
             border: 6px solid transparent;
             transition: 0.5s;
+
+            &:hover::before {
+              content: attr(data-name);
+              position: absolute;
+              font-size: 12px;
+              top: -20px;
+              left: 50%;
+              transform: translateX(-50%);
+              padding: 5px;
+              border-radius: 4px;
+              color: white;
+              background-color: rgba(0, 0, 0, 0.7);
+              white-space: nowrap;
+              z-index: 1000;
+              width: auto;
+              min-width: 50px;
+              height: auto;
+              text-align: center;
+              line-height: normal;
+            }
+
+            &[data-clicked="true"]:hover::before {
+              display: none; // hides the tooltip on hover for the clicked icon
+            }
 
             &::after {
               content: "";
