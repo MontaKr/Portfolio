@@ -89,7 +89,7 @@ const Sidebar = () => {
                     <span
                       className="icon"
                       data-name={val.name}
-                      data-clicked={clickedLink === val.name ? "true" : "false"}
+                      data-clicked={activeLink === val.name ? "true" : "false"}
                     >
                       <IconComponent
                         color={

@@ -89,6 +89,7 @@ export const Wrap = styled.div`
 
             span {
               color: #fff;
+              text-align: center;
               font-size: 2.5em;
               font-weight: 600;
             }
@@ -107,7 +108,7 @@ export const Wrap = styled.div`
             span {
               color: #fff;
               padding: 5px 30px;
-              font-size: 1.7em;
+              font-size: 1.5em;
               font-weight: 400;
               text-align: center;
               line-height: 1.2em;

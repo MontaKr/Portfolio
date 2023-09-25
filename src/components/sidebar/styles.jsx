@@ -168,4 +168,51 @@ export const Wrap = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .navigation {
+      inset: auto 20px 20px 20px;
+      width: auto;
+      height: 75px;
+      flex-direction: row;
+
+      ul {
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+          width: auto;
+          height: 75px;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          &.active {
+            transform: translateY(-10px);
+
+            .icon::after {
+              display: none;
+            }
+          }
+
+          a {
+            .icon {
+              min-width: auto;
+
+              &:hover::before {
+                top: auto;
+                bottom: 30px;
+              }
+            }
+          }
+
+          .icon::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 `;

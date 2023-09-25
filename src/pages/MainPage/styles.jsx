@@ -29,7 +29,7 @@ export const Box = styled.div`
   align-items: center;
 
   h1 {
-    font-size: 4.5em;
+    font-size: 5em;
     font-weight: 700;
     color: ${(props) => `#${props.color}`};
     text-shadow: -5px 5px 20px #000;
