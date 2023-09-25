@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  /* border: 2px solid blue; */
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -11,7 +10,6 @@ export const Wrap = styled.div`
   justify-content: center;
 
   .title {
-    /* border: 1px solid blue; */
     color: #fff;
     font-size: 7em;
     font-weight: 900;
@@ -34,7 +32,6 @@ export const Wrap = styled.div`
   }
 
   .container {
-    /* border: 1px solid red; */
     position: relative;
     max-width: 70%;
     display: flex;
@@ -42,6 +39,28 @@ export const Wrap = styled.div`
     justify-content: space-between;
     flex-grow: 1.4;
     padding-bottom: 100px;
+  }
+
+  @media (max-width: 1024px) {
+    .title {
+      &::before {
+        bottom: 6vw;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .title {
+      font-size: 5em;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .container {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -156,6 +175,59 @@ export const Card = styled.div`
       font-size: 1.5em;
       line-height: 1.5em;
       white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100px;
+    height: 150px;
+
+    &:hover {
+      width: 300px;
+    }
+
+    .product_img {
+      display: none;
+    }
+
+    .content {
+      left: 0;
+      padding: 20px;
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    &:hover {
+      width: 300px;
+    }
+
+    .circle {
+      &::before {
+        width: 150px;
+        height: 150px;
+      }
+
+      .logo {
+        width: 130px;
+      }
+    }
+
+    .content {
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
     }
   }
 `;

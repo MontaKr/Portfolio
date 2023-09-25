@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  /* border: 2px solid green; */
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -11,7 +10,6 @@ export const Wrap = styled.div`
   align-items: center;
 
   .title {
-    /* border: 1px solid red; */
     color: #fff;
     font-size: 7em;
     font-weight: 900;
@@ -26,9 +24,6 @@ export const Wrap = styled.div`
       height: 4px;
       background-color: white;
       bottom: 5vw;
-      /* width: 120%;
-      left: 50%;
-      transform: translateX(-50%); */
       width: 100%;
       left: 0;
     }
@@ -36,7 +31,6 @@ export const Wrap = styled.div`
 
   .container {
     flex-grow: 1.3;
-    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
 
@@ -91,6 +85,36 @@ export const Wrap = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .title {
+      &::before {
+        bottom: 9vw;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .title {
+      font-size: 6em;
+
+      &::before {
+        bottom: 15vw;
+      }
+    }
+
+    .container {
+      .box {
+        width: 75px;
+        height: 75px;
+        transform: perspective(1000px) rotateY(${(props) => props.degree}deg);
+      }
+
+      .btns {
+        margin-bottom: 20px;
+      }
+    }
+  }
 `;
 
 export const Span = styled.span`
@@ -125,5 +149,9 @@ export const Span = styled.span`
     border-radius: 20px;
     font-size: 15px;
     color: #000;
+  }
+
+  @media (max-width: 540px) {
+    transform: ${(props) => `rotateY(${props.num * 45}deg)`} translateZ(200px);
   }
 `;

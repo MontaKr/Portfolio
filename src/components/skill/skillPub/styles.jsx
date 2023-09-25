@@ -32,23 +32,50 @@ export const Wrap = styled.div`
   }
 
   .container {
-    /* border: 1px solid white; */
     max-width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1.1;
-    /* margin-top: 100px; */
 
     ul {
       padding-bottom: 100px;
-      /* border: 1px solid black; */
       width: 85%;
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .title {
+      &::before {
+        bottom: 6vw;
+      }
+    }
+
+    .container {
+      margin-bottom: 100px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .title {
+      text-align: center;
+      font-size: 6em;
+
+      &::before {
+        bottom: 6vw;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .container {
+      margin-bottom: 100px;
     }
   }
 `;
