@@ -1,7 +1,12 @@
 import React, { useRef } from "react";
 import { Wrap } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationArrow, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationArrow,
+  faEnvelope,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
@@ -51,6 +56,31 @@ const ContactForm = () => {
             <div className="text">
               <h3>Email</h3>
               <p>zhoon95@naver.com</p>
+            </div>
+          </div>
+          <div className="box">
+            <div className="icon">
+              <FontAwesomeIcon icon={faLink} />
+            </div>
+            <div className="text">
+              <span className="linkBx">
+                <a
+                  href="https://github.com/MontaKr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="individual-icon"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+                <a
+                  href="https://www.instagram.com/yimzhoon_official/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="individual-icon"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </a>
+              </span>
             </div>
           </div>
         </div>

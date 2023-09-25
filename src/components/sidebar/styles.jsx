@@ -171,7 +171,7 @@ export const Wrap = styled.div`
 
   @media (max-width: 1024px) {
     .navigation {
-      inset: auto 20px 20px 20px;
+      inset: auto 50px 20px 50px;
       width: auto;
       height: 75px;
       flex-direction: row;

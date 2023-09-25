@@ -33,7 +33,7 @@ const Sidebar = () => {
       color: "rgb(255, 153, 200)",
     },
     {
-      name: "Settings",
+      name: "Contact",
       path: "/contact",
       iconType: MailOutline,
       color: "rgb(0, 188, 212)",

@@ -23,6 +23,7 @@ export const Wrap = styled.section`
   }
 
   .container {
+    /* border: 1px solid blue; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -63,6 +64,21 @@ export const Wrap = styled.section`
           h3 {
             font-weight: 500;
             color: #00bcd4;
+          }
+
+          .linkBx {
+            width: 90px;
+            display: flex;
+            justify-content: space-between;
+
+            .individual-icon {
+              text-decoration: none;
+              color: inherit;
+            }
+
+            .individual-icon:hover {
+              color: #00bcd4;
+            }
           }
         }
       }
@@ -143,22 +159,45 @@ export const Wrap = styled.section`
     }
   }
 
-  @media (max-width: 991px) {
-    .contact {
-      padding: 50px;
+  @media (max-width: 1024px) {
+    inset: 50px 50px 120px 50px;
+
+    .container {
+      width: 120%;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .content {
+      display: none;
     }
 
     .container {
       flex-direction: column;
-    }
+      margin-top: 0;
+      width: 150%;
 
-    .container .contactInfo {
-      margin-bottom: 40px;
-    }
+      .contactInfo {
+        .box:nth-child(1),
+        .box:nth-child(2) {
+          display: none;
+        }
 
-    .container .contactInfo,
-    .contactForm {
-      width: 100%;
+        .box:nth-child(3) {
+          .icon {
+            display: none;
+          }
+
+          .text {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .contactForm {
+        width: 100%;
+      }
     }
   }
 `;
