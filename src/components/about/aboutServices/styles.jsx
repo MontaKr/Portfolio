@@ -118,4 +118,54 @@ export const Wrap = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .container {
+      inset: 50px 50px 120px 50px;
+
+      .serviceBx {
+        .serviceWrap {
+          flex-direction: column;
+          align-items: center;
+          .cardBx {
+            height: 30%;
+            width: 80%;
+
+            .contentBx {
+              span {
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .container {
+      .textBx {
+        span {
+          font-size: 6em;
+        }
+      }
+
+      .serviceBx {
+        .serviceWrap {
+          .cardBx {
+            .nameBx {
+              span {
+                font-size: 1.5em;
+              }
+            }
+            .contentBx {
+              span {
+                font-size: 0.7em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;

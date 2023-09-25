@@ -41,4 +41,10 @@ export const Box = styled.div`
     color: ${(props) => `#${props.color}`};
     text-shadow: -5px 5px 10px #000;
   }
+
+  @media (max-width: 1024px) {
+    h1 {
+      text-align: center;
+    }
+  }
 `;

@@ -38,6 +38,28 @@ export const Wrap = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .container {
+      inset: 50px 50px 120px 50px;
+
+      section {
+        h2 {
+          font-size: 8em;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .container {
+      section {
+        h2 {
+          font-size: 6em;
+        }
+      }
+    }
+  }
 `;
 
 export const Img = styled.img``;

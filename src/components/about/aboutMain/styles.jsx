@@ -25,6 +25,7 @@ export const Box = styled.div`
 
       ul {
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
         width: 100%;
@@ -48,11 +49,30 @@ export const Box = styled.div`
           }
 
           span {
-            font-size: 25px;
+            font-size: 1.5vw;
             font-weight: 500;
             margin-left: 20px;
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      inset: 50px 50px 120px 50px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .container .skillContainer ul {
+      flex-direction: column;
+
+      li {
+        width: 80%;
+        margin-bottom: 15px;
+        height: 6vh;
+        flex-wrap: nowrap;
       }
     }
   }
@@ -136,6 +156,18 @@ export const Wrap = styled.div`
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 540px) {
+    width: 270px;
+    height: 270px;
+
+    .imgContainer {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      z-index: 3;
     }
   }
 `;
