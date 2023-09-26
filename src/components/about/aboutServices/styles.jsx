@@ -138,7 +138,7 @@ export const Wrap = styled.div`
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 920px) {
     .container {
       .textBx {
         span {

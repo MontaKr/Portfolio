@@ -3,6 +3,7 @@ import { GlobalStyle, Wrap } from "./styles";
 import SkillList from "../../components/skill/skillList/SkillList";
 import SkillPub from "../../components/skill/skillPub/SkillPub";
 import SkillLanguage from "../../components/skill/skillLanguage/SkillLanguage";
+import LocomotiveScroll from "locomotive-scroll";
 import { gsap, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);

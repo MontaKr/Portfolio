@@ -168,7 +168,7 @@ export const Wrap = styled.section`
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 650px) {
     .content {
       display: none;
     }

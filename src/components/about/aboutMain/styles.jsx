@@ -64,7 +64,7 @@ export const Box = styled.div`
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 870px) {
     .container .skillContainer ul {
       flex-direction: column;
 
@@ -83,8 +83,8 @@ export const Wrap = styled.div`
   top: 15px;
   display: grid;
   place-items: center;
-  width: 400px;
-  height: 400px;
+  width: 26vw;
+  height: 26vw;
   opacity: 0;
   transform: translateY(-50px);
 
@@ -92,6 +92,7 @@ export const Wrap = styled.div`
     content: "MontaKr";
     position: absolute;
     bottom: 0;
+    font-size: 1vw;
     right: 15px;
     color: #fff;
   }
@@ -135,8 +136,8 @@ export const Wrap = styled.div`
 
   .imgContainer {
     position: relative;
-    width: 380px;
-    height: 380px;
+    width: 25vw;
+    height: 25vw;
     z-index: 3;
 
     img {
@@ -159,15 +160,13 @@ export const Wrap = styled.div`
     }
   }
 
-  @media (max-width: 540px) {
-    width: 270px;
-    height: 270px;
+  @media (max-width: 701px) {
+    width: 200px;
+    height: 200px;
 
     .imgContainer {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      z-index: 3;
+      width: 180px;
+      height: 180px;
     }
   }
 `;

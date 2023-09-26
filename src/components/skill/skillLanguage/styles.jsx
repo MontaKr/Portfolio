@@ -19,16 +19,6 @@ export const Wrap = styled.div`
     position: relative;
     display: inline-flex;
     padding-bottom: 5px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 4px;
-      background-color: white;
-      bottom: 1.5vw;
-      width: 100%;
-      left: 0;
-    }
   }
 
   .container {
@@ -41,15 +31,7 @@ export const Wrap = styled.div`
     padding-bottom: 100px;
   }
 
-  @media (max-width: 1024px) {
-    .title {
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  @media (max-width: 540px) {
+  @media (max-width: 720px) {
     .title {
       font-size: 5em;
     }
@@ -121,8 +103,8 @@ export const Card = styled.div`
       position: absolute;
       top: 10;
       left: 12;
-      width: 250px;
-      height: 250px;
+      width: 16vw;
+      height: 16vw;
       border-radius: 50%;
       background: #201e1e;
       border: 8px solid ${(props) => props.clr};
@@ -134,7 +116,7 @@ export const Card = styled.div`
 
     .logo {
       position: relative;
-      width: 220px;
+      width: 15vw;
       transition: 0.5s;
       transition-delay: 0.5s;
     }

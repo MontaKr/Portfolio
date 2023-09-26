@@ -17,16 +17,6 @@ export const Wrap = styled.div`
     align-items: center;
     position: relative;
     flex-grow: 1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 4px;
-      background-color: white;
-      bottom: 5vw;
-      width: 100%;
-      left: 0;
-    }
   }
 
   .container {
@@ -36,8 +26,10 @@ export const Wrap = styled.div`
 
     .box {
       position: relative;
-      width: 200px;
-      height: 200px;
+      /* width: 200px;
+      height: 200px; */
+      width: 10vw;
+      height: 10vw;
       transform-style: preserve-3d;
       transition: 1.5s;
       transform: perspective(1000px) rotateY(${(props) => props.degree}deg);
@@ -86,14 +78,6 @@ export const Wrap = styled.div`
     }
   }
 
-  @media (max-width: 1024px) {
-    .title {
-      &::before {
-        display: none;
-      }
-    }
-  }
-
   @media (max-width: 540px) {
     .title {
       font-size: 6em;
@@ -103,7 +87,6 @@ export const Wrap = styled.div`
       .box {
         width: 75px;
         height: 75px;
-        transform: perspective(1000px) rotateY(${(props) => props.degree}deg);
       }
 
       .btns {
@@ -123,7 +106,7 @@ export const Span = styled.span`
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: ${(props) => `rotateY(${props.num * 45}deg)`} translateZ(300px);
+  transform: ${(props) => `rotateY(${props.num * 45}deg)`} translateZ(350px);
   -webkit-box-reflect: below 0px
     linear-gradient(transparent, transparent, #0004);
 

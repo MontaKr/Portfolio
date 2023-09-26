@@ -19,16 +19,6 @@ export const Wrap = styled.div`
     position: relative;
     display: inline-flex;
     padding-bottom: 5px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 4px;
-      background-color: white;
-      bottom: 1.5vw;
-      width: 100%;
-      left: 0;
-    }
   }
 
   .container {
@@ -52,10 +42,6 @@ export const Wrap = styled.div`
   @media (max-width: 1024px) {
     .title {
       text-align: center;
-
-      &::before {
-        display: none;
-      }
     }
 
     .container {

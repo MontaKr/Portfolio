@@ -82,8 +82,8 @@ export const Wrap = styled.div`
           background: rgba(0, 0, 0, 0.1);
 
           a {
-            display: flex; // Set a to flex
-            justify-content: center; // Center horizontally
+            display: flex;
+            justify-content: center;
             align-items: center;
 
             .icon {
@@ -149,7 +149,7 @@ export const Wrap = styled.div`
             }
 
             &[data-clicked="true"]:hover::before {
-              display: none; // hides the tooltip on hover for the clicked icon
+              display: none;
             }
 
             &::after {
