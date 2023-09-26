@@ -109,7 +109,7 @@ const MainPage = () => {
       <Wrap ref={textRef}>
         {boxes.map((box) => (
           <Box key={box.id} color={box.color} className="boxClass">
-            <h1>Hi I'm MontaKr</h1>
+            <h1>Hi I'm MontaKr1</h1>
             <h2>Frontend Developer</h2>
           </Box>
         ))}
