@@ -21,7 +21,7 @@ const SkillPub = forwardRef((props, ref) => {
           {skillArray.map((val, idx) => {
             return (
               <List className="anim">
-                <img src={val.src} />
+                <img src={val.src} loading="lazy" />
               </List>
             );
           })}

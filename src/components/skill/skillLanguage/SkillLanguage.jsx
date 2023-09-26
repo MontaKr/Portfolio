@@ -50,7 +50,7 @@ const SkillLanguage = forwardRef((props, ref) => {
             <div className="anim">
               <Card clr={val.color}>
                 <div className="circle">
-                  <img src={val.flagImg} className="logo" />
+                  <img src={val.flagImg} className="logo" loading="lazy" />
                 </div>
                 <div className="content">
                   <h2>{val.name}</h2>

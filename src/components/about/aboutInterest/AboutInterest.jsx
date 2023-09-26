@@ -46,6 +46,7 @@ const AboutInterest = React.forwardRef((props, ref) => {
                 key={key}
                 src={val.src}
                 data-speed={val.speed}
+                loading="lazy"
               ></Img>
             );
           })}

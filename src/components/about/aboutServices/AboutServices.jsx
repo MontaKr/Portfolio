@@ -38,7 +38,7 @@ const AboutServices = React.forwardRef((props, ref) => {
               return (
                 <div className="cardBx" key={idx}>
                   <div className="iconBx">
-                    <img src={val.icon} alt="icon" />
+                    <img src={val.icon} alt="icon" loading="lazy" />
                   </div>
                   <div className="nameBx">
                     <span>{val.title}</span>
