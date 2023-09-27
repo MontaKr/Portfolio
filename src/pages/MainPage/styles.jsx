@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import bg1 from "../../assets/background/bg1.jpg";
+import bg1 from "../../assets/background/bg1.webp";
+import bg2 from "../../assets/background/bg2.jpg";
 
 export const Wrap = styled.div`
   min-height: 100vh;
@@ -10,7 +11,7 @@ export const Wrap = styled.div`
       transparent,
       #252525
     ),
-    url(${bg1});
+    url(${bg1}), url(${bg2});
 
   background-position: center;
   background-repeat: no-repeat;

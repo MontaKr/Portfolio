@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  height: 100vh; /* or set it to another appropriate value */
+  height: 100vh;
   overflow: hidden;
 
   .containerWrap {
