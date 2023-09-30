@@ -118,6 +118,7 @@ export const Span = styled.span`
     height: 100%;
     object-fit: cover;
     user-select: none;
+    transition: opacity 0.5s ease-in-out;
   }
 
   span {
