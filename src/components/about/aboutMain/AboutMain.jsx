@@ -2,7 +2,7 @@ import React, { useEffect, useRef, forwardRef } from "react";
 import { Box, Wrap } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenFancy, faGlobe, faCode } from "@fortawesome/free-solid-svg-icons";
-import { gsap } from "gsap";
+import profile from "../../../assets/profile/Nick.jpg";
 
 const AboutMain = React.forwardRef((props, ref) => {
   const imgRef = props.imgRef;
@@ -50,11 +50,7 @@ const AboutMain = React.forwardRef((props, ref) => {
             <div className="gradient"></div>
           </div>
           <div className="imgContainer">
-            <img
-              src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/2800/Nick-Wilde.Zootopia.webp"
-              alt="profile"
-              loading="lazy"
-            />
+            <img src={profile} alt="profile" loading="lazy" />
           </div>
         </Wrap>
         <div className="skillContainer">
